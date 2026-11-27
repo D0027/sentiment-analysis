@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+.streamlit/secrets.toml
+# Fine-tuned DistilBERT is ~255 MB: keep it out of git (use Git LFS or the Hugging Face Hub)
+models/distilbert_sentiment/

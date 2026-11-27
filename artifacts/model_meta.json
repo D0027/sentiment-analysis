@@ -1,0 +1,99 @@
+{
+  "dataset": {
+    "rows_raw": 50000,
+    "duplicates_removed": 418,
+    "rows_used": 49582,
+    "train": 39582,
+    "val": 5000,
+    "test": 5000
+  },
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 3,
+    "max_df": 0.9,
+    "max_features": 200000,
+    "sublinear_tf": true,
+    "n_features": 200000
+  },
+  "best_params": {
+    "naive_bayes_alpha": 0.1,
+    "linear_svm_C": 0.3,
+    "logreg_C": 10
+  },
+  "unigram_vs_bigram_val_acc": [
+    0.9052,
+    0.9224
+  ],
+  "featured_model": "Logistic Regression",
+  "best_on_test": "Ensemble (LR + DistilBERT)",
+  "transformer": {
+    "model": "distilbert-base-uncased",
+    "max_len": 256,
+    "epochs": 2,
+    "lr": 2e-05,
+    "batch": 32,
+    "train_size": 39582,
+    "best_val_acc": 0.9204,
+    "params": 66955010,
+    "train_seconds": 492.69728326797485
+  },
+  "results": [
+    {
+      "Model": "Ensemble (LR + DistilBERT)",
+      "Accuracy": 0.9314,
+      "CI low": 0.9236,
+      "CI high": 0.9384,
+      "Macro F1": 0.9314,
+      "ROC-AUC": 0.9793,
+      "Log-loss": 0.1861
+    },
+    {
+      "Model": "DistilBERT",
+      "Accuracy": 0.9164,
+      "CI low": 0.9086,
+      "CI high": 0.9236,
+      "Macro F1": 0.9164,
+      "ROC-AUC": 0.9739,
+      "Log-loss": 0.2335
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.9124,
+      "CI low": 0.9042,
+      "CI high": 0.9204,
+      "Macro F1": 0.9124,
+      "ROC-AUC": 0.9724,
+      "Log-loss": 0.2171
+    },
+    {
+      "Model": "Linear SVM",
+      "Accuracy": 0.9098,
+      "CI low": 0.9018,
+      "CI high": 0.9176,
+      "Macro F1": 0.9098,
+      "ROC-AUC": 0.9707,
+      "Log-loss": 0.2188
+    },
+    {
+      "Model": "Naive Bayes",
+      "Accuracy": 0.8932,
+      "CI low": 0.885,
+      "CI high": 0.902,
+      "Macro F1": 0.8932,
+      "ROC-AUC": 0.9555,
+      "Log-loss": 0.2725
+    },
+    {
+      "Model": "Dummy",
+      "Accuracy": 0.5018,
+      "CI low": 0.4878,
+      "CI high": 0.5166,
+      "Macro F1": 0.3341,
+      "ROC-AUC": 0.5,
+      "Log-loss": 0.6931
+    }
+  ]
+}

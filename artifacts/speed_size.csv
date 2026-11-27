@@ -1,0 +1,3 @@
+Model,Reviews/sec,Size (MB)
+TF-IDF + Logistic Regression (CPU),2507.81,3.81
+"DistilBERT (GPU, fp16)",759.45,255.41
